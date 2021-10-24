@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="paragraf"></p>
+    <input type="text" name="adiniz"  value="" />
+
+        <form>
+            <input type="radio" name="cinsiyet" id="kadın">
+            <input type="radio" name="cinsiyet" id="erkek">
+            <input type="radio" name="cinsiyet" id="belirtmiyor">
+        </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <input type="text" name="firstName">
+            </div>
+        </div>
+    </div>
+    <button type="button" style="background-color: red;border:0">Gönder</button>
+    <script>
+        document.getElementById('paragraf').innerText = "getElementById kullanılarak yazıldı";
+
+        if(document.getElementsByName('ad') != null){
+            console.log("var");
+        }
+
+        document.getElementsByName('adiniz')[0].value = "değer2";
+        
+        var el = document.getElementsByName('adiniz');
+        el[0].value = "değer1";
+
+        
+    </script>
+</body>
+</html>

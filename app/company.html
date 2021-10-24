@@ -13,19 +13,52 @@
     <style>
         body{
             font-family: 'Open Sans';
-        }        
+        }
+        
+        .fas {
+            color: orange;
+        }
+
+        #hizmetler .fas{
+letter-spacing: 1px;
+        }
+
     </style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
-   <nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <img src="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    <!-- <nav>
         <ul>
             <li><a href="#hakkimizda">Hakkımızda</a></li>
             <li><a href="#hizmetlerimiz">Hizmetlerimiz</a></li>
             <li><a href="#portfolyo">Portfolyo</a></li>
             <li><a href="#iletisim">İletişim</a></li>
         </ul>
-   </nav>
+   </nav> -->
+   <button type="button" style="text-align: right;float:right">Gönder</button>
    <section id="hakkimizda" class="container-fluid">
     <div class="row">
         <div class="col-md-8 col-sm-6">
@@ -49,9 +82,11 @@
     
     
    </section>
-   <section id="hizmetlerimiz">
+   <section id="hizmetlerimiz" class="py-1 py-2 px-3">
     <div class="row">
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <span class="fas fa-globe fa-9x"></span>
+        </div>
         <div class="col-md-8">
             <h2>Hizmetlerimiz</h2>
             <h4>
@@ -63,10 +98,55 @@
             </p>
         </div>
     </div>   
-    
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="fas fa-power-off fa-5x"></span>
+                    <h4>POWER</h4>
+                    <p>Lorem ipsum dolar sit amet...</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fas fa-heart fa-5x"></span>
+                    <h4>LOVE</h4>
+                    <p>Lorem ipsum dolar sit amet...</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fas fa-heart fa-5x"></span>
+                    <h4>LOVE</h4>
+                    <p>Lorem ipsum dolar sit amet...</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="fas fa-power-off fa-5x"></span>
+                    <h4>POWER</h4>
+                    <p>Lorem ipsum dolar sit amet...</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fas fa-heart fa-5x"></span>
+                    <h4>LOVE</h4>
+                    <p>Lorem ipsum dolar sit amet...</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fas fa-heart fa-5x"></span>
+                    <h4>LOVE</h4>
+                    <p>Lorem ipsum dolar sit amet...</p>
+                </div>
+            </div>            
+        </div>
+    </div>
 
    </section>
    <section id="portfolyo"></section>
    <section id="iletisim"></section>
+   <section class="section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">sola hizalı</div>
+                <div class="col-md-4 shb">sağa hizalı</div>
+            </div>
+        </div>
+   </section>
 </body>
 </html>
