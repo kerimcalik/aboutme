@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onclick="console.log(1)">
+    <!-- <span id=yaz></span>
+    <label for=""></label>
+    <input type="number" id="">
+    <input type="number" id="">
+    <button type="button" onclick="ilkFonksiyon(2,3)">Hesapla</button> -->
+    
+    <script type="text/javascript" id="">
+        function ilkFonksiyon(parametre1, parametre2)
+        {
+            return parametre1 + parametre2;
+        }
+
+        /*
+        console.log(ilkFonksiyon(2, 3));
+        document.write(ilkFonksiyon(2, 3));
+        alert(ilkFonksiyon(2, 3));
+        document.getElementById("yaz").innerText = ilkFonksiyon(2, 3);
+        var toplam = ilkFonksiyon(2, 3);
+        */
+    </script>
+    <div style="width: 100%;padding: 20px;">
+        <label for="kilo">Kilonuz:</label>
+        <input type="number" id="kilo" required>
+        <label for="boy">Boyunuz:</label>
+        <input type="number" id="boy" required>
+        <button type="button" onclick="vkiHesapla()">Hesapla</button>
+    </div>
+    <div id="goster" style="background-color: palegreen;">Vücut Kitle Değeriniz: </div>
+    <script>
+        var goster = document.getElementById("goster");
+        goster.style.display = "none";
+
+        function vkiHesapla(){
+            var kilo = document.getElementById("kilo").value;
+            var boy = document.getElementById("boy").value;
+            var vki = kilo / (boy**2);
+            //alert(vki);
+            
+            var vucutTipi;
+            if(vki < 30){
+                vucutTipi = "cılız";
+            }
+
+            goster.style.display = "block";
+            goster.style.color = "#fff";
+            goser.style.backgroundColor = "#ff0000";
+            goster.innerHTML = "<span>" + vki + "</span>";
+
+            //return vki;
+        }
+
+        var personel = {
+            name: "",
+            lastName: "",
+            age: 10,
+            fullName: function(){
+                return this.name + " " + this.lastName;
+            }
+        }
+
+        console.log(personel.fullName);        
+    </script>
+</body>
+</html>

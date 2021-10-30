@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <style>
+        body div.container div.row div.col-md-4:last-child input{
+
+        }
+        input[value="firstName"] {
+
+        }
+    </style>
 </head>
 <body>
-    <p id="paragraf"></p>
+    <!-- <p id="paragraf"></p>
+    <p></p>
     <input type="text" name="adiniz"  value="" />
 
         <form>
@@ -25,9 +33,10 @@
             </div>
         </div>
     </div>
-    <button type="button" style="background-color: red;border:0">Gönder</button>
+    <button type="button" style="background-color: red;border:0">Gönder</button> -->
+    <span id="atama" style="text-align:center;color:red"></span>
     <script>
-        document.getElementById('paragraf').innerText = "getElementById kullanılarak yazıldı";
+        /*document.getElementById('paragraf').innerText = "getElementById kullanılarak yazıldı";
 
         if(document.getElementsByName('ad') != null){
             console.log("var");
@@ -38,7 +47,78 @@
         var el = document.getElementsByName('adiniz');
         el[0].value = "değer1";
 
+        document.getElementsByTagName('p')[1].innerHTML = 
+        '<span style="color:red;font-size:26px">getElementsByTagName kullanılarak üretildi</span>';
+
+        var el1 = document.querySelector('div.container div.col-md-4:last-child input[name="firstName"]');
+        el.value = "ad, soyad";
         
+        document.querySelector('.container').innerHTML = '<p>paragraf</p>';
+        document.querySelector('#adiniz').value = 'değer3';*/
+
+        var x = 1;
+        x = 5;
+        document.write(x);
+
+        var a, b, c;
+
+        var firstName;
+
+        const sabitDegisken = "değeri sabit";
+        let blokDegisken = "bloklu değişken";
+
+        document.getElementById("atama").innerText = sabitDegisken;
+
+        //referans değerli değişken oluşturma
+        var degisken1 = "ilk değerin";
+        var degisken1;
+
+        document.write(degisken1);
+
+        //referans değişken atama ifadesi
+        var x;
+        var x = 1;
+
+        document.write(x);
+
+        const araba = ["tofaş","ford","nissan"];
+        document.write(araba[0]);
+
+        //var
+        const personel = { adi: "mehmet", soyad: "yılmaz", yas: "30" };
+        //hata üretir
+        //personel = { adi: "mehmet", soyad: "yılmaz", yas: "30" };
+        document.write(personel.adi);
+
+        x = x**2;
+
+        var length = 16;
+        var name = "mehmet";
+        name = 16;
+        var cikti = length + name;
+
+        var deger = 3;
+        {
+            let deger4 = 5;            
+        }
+
+        document.write(deger);
+        document.write(deger4);
+
+        for(let i = 0; i < 10; i++){
+
+        }        
+        document.write(i);
     </script>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <script>
+        document.write(deger);
+        //değişkenin tipini öğrenmek için
+        typeof(3);
+    </script>
+    
 </body>
 </html>
