@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <script>
         window.addEventListener("load", function(){
             var el = document.getElementById("paragraf");
@@ -26,6 +27,8 @@
     </script>
 
     <script type="text/javascript">
+        "use strict";
+
         var text = "lorem ipsum " + "dalor sit amet";
         text = 'İstanbul\'un en güzel semti "İstinye"\'dir';
         text = "İstanbul'un en güzel semti \"İstinye\"'dir";
@@ -115,6 +118,60 @@
         asd
         asdas`;
 
+        var name = "kerim";
+        var surname = "çalık";
+        
+        text = `Adın ${name},soyadın ${surname}`;
+
+        for(var i = 0; i <10; i++){
+            let keyTemplate = `<div class="row">
+                                <div class="col-md-4>
+                                    <button>${i}</button>
+                                </div>"
+                            </div>`;
+        }
+        
+
+        var d = 10 / "rakam"; //NaN
+        //kontrol için
+        if(isNaN(d)){
+
+        }
+
+        
+        var d = 10 / parseInt("1a"); //sonuç 10;
+        var d = 10 / Number("1a"); //sonuç NaN;
+
+        var d = new Number(10);
+        var d = "a";
+        d = 10;
+
+        //string dönüşümü
+        var d = new Number(10);
+        var s = d.toString();
+
+        var s = 9.56;
+        s = s.toFixed(0); //9
+        s = s.toFixed(1); //9.5
+        s = s.parseInt(s);
+        s = s.parseFloat(s);
+
+        $(document).load(function(){
+
+
+        });
+
+        $('.class').click(function(){
+
+
+        });
+
+        $.each($('.class'), function(){
+            if(this.attr('id') == "adi"){
+                this.text = "deneme";
+            }
+
+        });
     </script>
 </head>
 <body>
