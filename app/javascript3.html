@@ -24,6 +24,55 @@
 
         });                
     </script>
+
+    <script type="text/javascript">
+        var text = "lorem ipsum " + "dalor sit amet";
+        text = 'İstanbul\'un en güzel semti "İstinye"\'dir';
+        text = "İstanbul'un en güzel semti \"İstinye\"'dir";
+        text = "istanbul'un  \\  en güzel semti";
+        //yeni satır
+        text = "\n";
+        //sekme(girinti)
+        text = "\t";
+        //dikey girinti
+        text = "\v";
+
+        let name = "osman";
+        name = new String("osman");
+
+        //=== hem değerine hem de veri tipine bakar
+        if(name === "osman"){
+
+        }
+
+        //string ifadenin toplam karakter sayısını döndürür
+        var length = text.length;
+
+        text = "lorem ipsum dalor sit amet";
+
+        //tex değerinin içindeki başlangıç ve alınacak değer kadar
+        //metni ilgili text'ten alır
+        console.log(  text.substr(6, 5)  );
+        console.log(  text.substring(0, 5)  );
+        console.log(  text.slice(0, 5)  );
+
+        
+
+        //let, var farkı. global ve yerel seviyede değişken 
+        //tanımlama
+        function fonk(){
+            let text1="dolu";
+            console.log(text);
+        }
+
+        fonk();
+
+        consol.log(text1);
+        
+        text = "lorem ipsum dalor sit amet";
+        text = text.replace("aranacak değer", "değiştirelecek değer");
+        text = text.replace("lorem", "sayın");
+    </script>
 </head>
 <body>
     <p id="paragraf"></p>
