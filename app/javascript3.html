@@ -72,6 +72,49 @@
         text = "lorem ipsum dalor sit amet";
         text = text.replace("aranacak değer", "değiştirelecek değer");
         text = text.replace("lorem", "sayın");
+
+        //büyük harf
+        text = text.toUpperCase();
+        //küçük
+        text = text.toLowerCase();
+        
+        //string birleştirme
+        text = "Merhaba" + " " + "Dünya";
+        text = "Merhaba".concat(" ", "Dünya");
+        text = text.trim();
+
+        //string başlagıç değerine kaç karakter yazılacağı
+        text = text.padStart(1,0);
+        //string son değerine kaç karakter yazılacağı
+        text = text.padEnd(1,0);
+
+        //karakter indisi bulma
+        text = "deneme@deneme.com";
+        console.log(text.charAt(0));
+        console.log(text.charCodeAt(0));
+
+        console.log(text[0]);
+        text[0] = 1; //hata verir
+
+        text = "c#,programlama,microsoft";
+        text.split(',');
+
+        text = "ipsum lorepm ipsum dolar sit amet";
+        text.search("@");
+        text.match(/@/gm);
+
+        text = "lorep" + " ipsum";
+        text += "dolar";
+        //çok satırlı metin yazabilmek
+        text = `lorem ipsum
+        asdas
+        asd
+        asd
+        asd
+        asd
+        asd
+        asdas`;
+
     </script>
 </head>
 <body>
