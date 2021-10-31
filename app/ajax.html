@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function load(){
+            const xhttp = new XMLHttpRequest();            
+            xhttp.onload = function(){
+                console.log(this.responseText)
+            }
+
+            xhttp.onreadystatechange = function(){
+                if(this.status == 200){
+                    console.log(this.responseText)
+                }else if(this.status == 404){
+                    console.log("ilgili adres bulunamadı");
+                }else if(this.status == 500){
+                    console.log("sunucu tarafında hata oluştu");
+                }
+
+            }
+
+            xhttp.open("GET", "https://www.msn.com/tr-tr/haber/dunya/cumhurba%C5%9Fkan%C4%B1-erdo%C4%9Fan-g-20-zirvesi-yeme%C4%9Finde/ar-AAQ8v0z?ocid=msedgntp");
+            xhttp.send();
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="load()">Çalıştır</button>
+</body>
+</html>
