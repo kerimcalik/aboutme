@@ -9,7 +9,7 @@
 </head>
 <body>
     <button onclick="xmlLoad()">Çalıştır</button>
-    <table id="katalog"></table>
+    <table id="katalog" border="1"></table>
 
     <script>
         
@@ -31,14 +31,22 @@
                 xhttp.onload = function(){
                     var xmlDocumation = this.responseXML;
                     var cd = xmlDocumation.getElementsByTagName("CD");
-                                        
+                    
+                    var table = "<thead><tr><td>Title</td><td>Price</td></tr></thead>";
                     for(let i = 0; i < cd.length; i++){
                         
-                        console.log(cd[i].getElementsByTagName("TITLE")[0]);
+                        var title = cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+                        var price = cd[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
+                        table += `<tr>
+                                    <td>${title}</td>
+                                    <td>${price}</td>
+                                  </tr>`;
                     }
+
+                    document.getElementById("katalog").innerHTML = table;
                 }
 
-                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.open("GET", "https://www.ntv.com.tr/son-dakika.rss");
                 xhttp.send();
 
             }
