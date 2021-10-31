@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    
+    <p></p>
+
+    <script>
+        var body = document.getElementsByTagName("body")[0];        
+        var span = document.createElement("span");
+        
+        body.appendChild(span);
+        
+        //dark mode çözümü
+        var head = document.getElementsByTagName("head")[0];
+        var style = document.createElement("link");
+        
+        style.rel = "stylesheet";
+        style.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
+        head.appendChild(style);
+
+        //new Date(yıl, ay, gün, saat, dakika, saniye, salise)
+        //new Date()
+        //new Date(salise)
+        //new Date("string değeri")
+        var d = new Date();
+        console.log(d);
+        alert(d);
+        document.write(d);
+        document.getElementsByTagName("p")[0].innterText = d;
+
+        var tarih = new Date(2021,10,31,11,2);
+        
+        //ay ve gün yer değiştirilmiş
+        var hataliTarih = new Date(2021, 31, 9);
+
+        const zaman = new Date(2021, 9, 31, 11, 10)
+
+        /*
+        Tarih formatları
+        ISO     -> 2021-10-31
+        Short   -> 10/31/2021
+        Long    -> Oct 31, 2021
+        */
+
+        var mevcutTarih = new Date();
+        var mevcutYil = mevcutTarih.getFullYear();
+        var mevcutAy = mevcutTarih.getMonth();
+        var mevcutGun = mevcutTarih.getDate();
+
+        var dogumTarihi = new Date(1990, 0, 31);
+        var dogumYili = dogumTarihi.getFullYear();
+        var dogumAyi = dogumTarihi.getMonth();
+        var dogumGunu = dogumTarihi.getDate();
+
+        console.log(`Yıl: ${mevcutYil - dogumYili}`);
+        console.log(`Ay: ${mevcutAy - dogumAyi}`);
+        console.log(`Gün: ${mevcutGun - dogumGunu}`);
+
+        var tarihDuzenle = new Date();
+        var yil = tarihDuzenle.setFullYear(2011);
+
+    </script>
+</body>
+</html>
