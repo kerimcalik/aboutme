@@ -61,13 +61,36 @@
                 }
             );
 
+            /*
             $("#hide").click(function(){
                 $("#p").hide();
             })
+            */
 
             $("#show").click(function(){
                 $("#p").show();
             })
+
+            $("#hide").click(function(){
+                $('#p').toggle("fast", 
+                    function(){
+                        console.log("işlem sonucu 1");
+                    }
+                );
+            })
+
+            $("#fade").click(function(){
+                // $('#p').fadeIn(800);
+                // $('#p').fadeOut(1500);
+                //$('#p').fadeToggle(3500);
+                //$('#p').fadeTo(1500, 0.4);
+                $('#p').fadeTo(1500, 0.9);
+                //$('#p').fadeTo(1500, 1);
+                //$('#p').fadeTo(1500, 0);
+                $('#div1').fadeTo(800, 0.2);
+                $('#div2').fadeTo(800, 0.6);
+                $('#div3').fadeTo(800, 0.8);
+            });
         });
 
         
@@ -75,16 +98,20 @@
     </script>
 </head>
 <body>
-    <p>
+    <!-- <p>
         <button id="btn" type="button" onclick="">Gönder</button>
-    </p>
+    </p> -->
     <p>
         <button id="hide">Gizle</button>
-        <button id="show">Göster</button>
+        <!-- <button id="show">Göster</button> -->
+        <button id="fade">Animasyon</button>
     </p>
-    <p id="p">Kapanacak olan Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <p id="p" style="display: none;">Kapanacak olan Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
-    <p>Açık olan Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
+    <!-- <p>Açık olan Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p> -->
+    <div id="div1" style="width: 100px;height: 100px;background-color: red;"></div><br>
+    <div id="div2" style="width: 100px;height: 100px;background-color: blue;"></div><br>
+    <div id="div3" style="width: 100px;height: 100px;background-color: black;"></div><br>
 </body>
 </html>
