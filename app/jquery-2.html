@@ -35,12 +35,36 @@
             console.log($('.link').attr("target"));
 
             //SET içerik ifadeleri; text(), html(), val()
+            $('#btn4').bind("click", function(){
+                $('#p').text("btn4 tarafından yazdırılan metin");
+            })
 
-
+            $('#btn5').bind({
+                click: function(){
+                    $('#p').html('<span>Deneme</span> <strong>merhaba</strong>');
+                },
+                mousemove: function(){
+                    console.log("fare üzerinde");
+                },
+                mouseleave: function(){
+                    $('#btn5').unbind("mousemove");
+                } 
+            })
+            
+            var w = $(window).width();
+            var h = $(window).height();            
+            
+            $('#box').mouseover(function(){
+                $(this).css({
+                    "left": Math.floor(Math.random() * w),
+                    "top": Math.floor(Math.random() * h),
+                })
+            })
         });
     </script>
 </head>
 <body>    
+    <div id="box" style="width: 50px;height:50px;position: absolute;background-color: red;"></div>
     <input type="text" id="name" placeholder="adınız">
     <button id="btn3">Value göster</button><br>
     <button id="btn1">Text göster</button>
