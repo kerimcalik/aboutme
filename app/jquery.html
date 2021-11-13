@@ -32,7 +32,34 @@
                 $(this).hide().show();                
             });
 
-            
+            $("#btn").dblclick(function(){
+                console.log("çift tıklama")
+            });
+
+            $("#btn").mouseenter(function(){
+                console.log("üzerinde")
+            });
+
+            $("#btn").mouseleave(function(){
+                console.log("dışında")
+            });
+
+            $("#btn").mousedown(function(){
+                console.log("fare tıklama bırakılmadı")
+            });
+
+            $("#btn").mouseup(function(){
+                console.log("fare tıklama bırakıldı")
+            });
+
+            $("#btn").hover(
+                function(){
+                    console.log("fare üzerine")
+                },
+                function(){
+                    console.log("fare üzerine değil")
+                }
+            );
         });
 
         
