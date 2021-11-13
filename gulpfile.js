@@ -20,7 +20,12 @@ gulp.task('sass', function()
 gulp.task('start', function(){
     browserSync.init({
         server:{
-            baseDir: './dist/'
+            baseDir: './dist/',
+            middleware: function(req, res, next){
+                res.setHeader("Access-Control-Allow-Origin","*");
+                res.setHeader("Access-Control-Allow-Methods","*");
+                next();
+            }
         }
     });
     gulp.watch('./app/css/*.scss', gulp.series('sass'));

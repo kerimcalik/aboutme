@@ -1,0 +1,9 @@
+{
+    "configurations":[
+        {
+            "runtimeArgs": [
+                "--disable-web-security"
+            ]
+        }
+    ]
+}
