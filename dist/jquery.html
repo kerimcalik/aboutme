@@ -91,13 +91,74 @@
                 $('#div2').fadeTo(800, 0.6);
                 $('#div3').fadeTo(800, 0.8);
             });
+
+            $('#slide').click(function(){
+                $('#slidePanel').slideDown(300, function(){
+                    $(this).css("background-color","red");
+                });
+                $('#slidePanel').slideUp(500, function(){
+                    $(this).css("background-color","yellow");
+                });
+
+                $('#slidePanel').slideToggle(800,
+                    function(){
+                        $(this).css("background-color","#fcfcfc");
+                    }
+                );
+            })
+
+            $('#anim').click(function(){
+                $('#animation').animate(
+                    {
+                        "left":"300px",
+                        "top": "200px",
+                        "width":"50px",
+                        "height":"50px",
+                        "background-color":"#f0f0f0"
+                    },
+                    1000,
+                    function(){
+                        console.log("işlem bitti");
+                    }
+                );
+                $('#animation').animate(
+                    {
+                        "left":"0px",
+                        "top": "-1000px",
+                        "width":"150px",
+                        "height":"150px"
+                    },
+                    500,
+                    function(){
+                        console.log("işlem bitti");
+                    }
+                );
+            })
         });
 
         
 
     </script>
+    <style>
+        #p {
+            color: rgb(0, 0, 0);
+        }
+    </style>
+
 </head>
 <body>
+    <p>
+        <button id="anim">Animate</button>
+    </p>
+    <div id="animation" style="width: 80px;height: 80px;
+    background-color: chartreuse; position: absolute;left:150px;top:-3000px"></div>
+    <p>
+        <button id="slide">Slide Down</button>
+    </p>
+    <div id="slidePanel" style="border: 1px solid #000;
+    background-color: blue;display: none;">
+        Slide
+    </div>
     <!-- <p>
         <button id="btn" type="button" onclick="">Gönder</button>
     </p> -->
