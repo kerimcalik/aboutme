@@ -71,6 +71,7 @@
                 let ad = this.ad;
                 let soyad = this.soyad;
                 let id = this.id;
+
                 $('tbody', table).append(`
                     <tr>
                         <td>${this.id}</td>
@@ -80,6 +81,7 @@
                     </tr>
                 `);
 
+                
                 $('#delete-' + i).bind('click', function(){
                     alert(`Adı ve Soyadı, ${ad} ${soyad} kaydı silmek istiyor musunuz?`);
                 });
@@ -94,10 +96,46 @@
                 });
             });
 
+            let gunler = new Array("P","S","Ç","P","C","C","P");
+            var date = new Date();
+            var setDate = new Date(date.getFullYear(), date.getMonth(), 0);
+            var day = date.getDay();
+            //Seçilen ayın kaç gün çektiğini söyler
+            var totalDays = setDate.getDate();
+            var table = $('#calendar');
+            table.append("<thead><tr></tr></thead>");
+
+            $.each(gunler, function(i){
+                $('tr', table).append(`<th>${gunler[i]}</th>`);
+            });
+            
+            table.append("<tbody></tbody>")
+            
+            for (let index = 0; index < totalDays; index++) {
+                var firstDay = new Date(date.getFullYear(), date.getMonth() + 1, index + 1).getDay();
+                
+                if(index % 7 == 0){
+                    $('tbody', table).append("<tr></tr>");
+                    
+                    var yaz = "";
+
+                    for (let j = 0; j < 7; j++) {
+                        yaz = firstDay - 1 == j ? "1" : "";
+                        $('tbody tr:last-child',table).append("<td></td>");                    
+                    }
+                }                
+
+                
+            }
+            
         });
     </script>
 </head>
 <body>
+    <table id="calendar" class="table">
+        
+    </table>
+
     <table class="table">
         <thead>
             <tr>
