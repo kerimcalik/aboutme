@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('p').append("Append kullanılara yazdır.");
+            $('p').prepend("Prepend kullanılarak yazdır.")
+
+            $('p').after("<p>after kullanarak sonrasına yazdır.</p>");
+            $('p').before("<p>before kullanarak öncesine yazdır</p>");
+
+            var days = new Array("Pazartesi","Salı","Çarşamba");
+            $('#x').append("<ul>");
+
+            for(var i = 0; i < days.length; i++){
+                $('#x ul').append("<li>" + days[i] + "</li>");
+            }
+            
+            $('#x').css({
+                "width": "100%",
+                "background-color":"yellow",
+                "border": "1px solid red"
+            });
+
+            $('#empty').click(function(){
+                $('#x').empty();
+            })
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="x"></div>
+    <button id="empty">İçeriği Sil</button>
+    <p>Lorem ipsum dolar sit amet.</p>
+    
+</body>
+</html>

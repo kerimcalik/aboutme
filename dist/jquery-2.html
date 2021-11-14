@@ -51,9 +51,10 @@
                 } 
             })
             
-            var w = $(window).width();
-            var h = $(window).height();            
-            
+            //Kutu yakalama
+            var w = $(window).width() - $('#box').width();
+            var h = $(window).height() - $('#box').height();            
+           
             $('#box').mouseover(function(){
                 $(this).css({
                     "left": Math.floor(Math.random() * w),
@@ -64,7 +65,9 @@
     </script>
 </head>
 <body>    
-    <div id="box" style="width: 50px;height:50px;position: absolute;background-color: red;"></div>
+    <div id="box" style="width: 50px;height:50px;
+    position:absolute;background-color: red;"></div>
+
     <input type="text" id="name" placeholder="adınız">
     <button id="btn3">Value göster</button><br>
     <button id="btn1">Text göster</button>

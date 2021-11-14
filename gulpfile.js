@@ -26,7 +26,8 @@ gulp.task('start', function(){
                 res.setHeader("Access-Control-Allow-Methods","*");
                 next();
             }
-        }
+        },
+        cors: true
     });
     gulp.watch('./app/css/*.scss', gulp.series('sass'));
     gulp.watch('./app/*.html', gulp.series('useref')).on('change', browserSync.reload);
