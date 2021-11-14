@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
     <script>
         $(function(){
             $('p').append("Append kullanılara yazdır.");
@@ -35,9 +36,23 @@
     </script>
 </head>
 <body>
-    <div id="x"></div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#Id</th>
+                <th>Adı</th>
+                <th>Soyadı</th>
+                <th>İşlem</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <!-- <div id="x"></div>
     <button id="empty">İçeriği Sil</button>
-    <p>Lorem ipsum dolar sit amet.</p>
+    <button id="remove" onclick='$("#x").remove()'>Öğeyi Sil</button>
+    <p>Lorem ipsum dolar sit amet.</p> -->
     
 </body>
 </html>
