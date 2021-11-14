@@ -47,7 +47,7 @@
                 },
                 {
                     "id": 3,
-                    "ad": "ensa",
+                    "ad": "ensar",
                     "soyad": "kılıç"
                 },
                 {
@@ -62,14 +62,36 @@
 
             $.each(json, function(i){
                 
+                var buttons = `
+                    <button class="btn btn-danger" id="delete-${i}">Sil</button>
+                    <button class="btn btn-primary" id="update-${i}">Düzenle</button>
+                    <button class="btn btn-success" id=detail-${i}>Detay</button>
+                `;
+
+                let ad = this.ad;
+                let soyad = this.soyad;
+                let id = this.id;
                 $('tbody', table).append(`
                     <tr>
                         <td>${this.id}</td>
                         <td>${this.ad}</td>
                         <td>${this.soyad}</td>
-                        <td></td>
+                        <td>${buttons}</td>
                     </tr>
                 `);
+
+                $('#delete-' + i).bind('click', function(){
+                    alert(`Adı ve Soyadı, ${ad} ${soyad} kaydı silmek istiyor musunuz?`);
+                });
+                
+
+                $('#update-' + i).on('click', function(){
+                    alert("güncelle")
+                });
+
+                $('#detail-' + i).click(function(){
+                    alert(`Adı: ${ad}, Soyad: ${soyad}, Id: ${id}`);
+                });
             });
 
         });
