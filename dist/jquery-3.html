@@ -32,6 +32,46 @@
                 $('#x').empty();
             })
             
+
+            
+            var jsonObject = `[
+                {
+                    "id": 1,
+                    "ad": "emre",
+                    "soyad": "çoksoy"
+                },
+                {
+                    "id": 2,
+                    "ad": "ömer",
+                    "soyad": "topaloğlu"
+                },
+                {
+                    "id": 3,
+                    "ad": "ensa",
+                    "soyad": "kılıç"
+                },
+                {
+                    "id": 4,
+                    "ad": "kübra",
+                    "soyad": "aşan"
+                }
+            ]`;
+
+            var json = $.parseJSON(jsonObject);
+            var table = $('.table');
+
+            $.each(json, function(i){
+                
+                $('tbody', table).append(`
+                    <tr>
+                        <td>${this.id}</td>
+                        <td>${this.ad}</td>
+                        <td>${this.soyad}</td>
+                        <td></td>
+                    </tr>
+                `);
+            });
+
         });
     </script>
 </head>
